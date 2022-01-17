@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Karunaideator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+  <div id="wrap">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Ideator</a>
+    <div class= "d-inline-flex justify-content-end">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+         
+          <a class="nav-link" href="/">All Ideas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/random">Inspire Me</a>
+        </li>
+        <li class="nav-item">
+       
+          <a class="nav-link" href="/about">About</a>
+        </li>
+      </ul>
+    </div>
+   </div>
+  </div>
+</nav>
+ 
+
+<div class ="container-md">
+<%= render 'shared/flash_messages' %>
+    <%= yield %>
+  </div>
+</div > <!--End of wrapper content -->
+
+
+
+ <div id="footer" class="text-center">
+    <p>&copy; TECHBRAIN <%= Date.today.year %> All Rights Reserved</p>
+  </div>
+
+ 
+
+  </body>
+
+   
+</html>
